@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth-options";
 
+export const runtime = 'edge';
+
 export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
   const listing = await prisma.produceListing.findUnique({ where: { id: params.id } });
   if (!listing) return NextResponse.json({ error: "Not found" }, { status: 404 });

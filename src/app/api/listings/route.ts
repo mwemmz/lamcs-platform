@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth-options";
 
+export const runtime = 'edge';
+
 export async function GET() {
   const session = await getServerSession(authOptions);
   const isAdmin = session?.user?.role === "admin";

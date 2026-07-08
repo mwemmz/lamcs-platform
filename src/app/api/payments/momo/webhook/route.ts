@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { MTNMoMoProvider } from "@/lib/payments/mtn-momo";
 
+export const runtime = 'edge';
+
 export async function POST(req: NextRequest) {
   const payload = (await req.json()) as Record<string, unknown>;
   const provider = new MTNMoMoProvider();
