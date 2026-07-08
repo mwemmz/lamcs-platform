@@ -1,38 +1,31 @@
-import { getToken } from "next-auth/jwt";
-import { NextRequest, NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
+import { NextResponse } from "next/server";
 
-export async function middleware(req: NextRequest) {
+export default auth((req) => {
   const path = req.nextUrl.pathname;
-  const token = await getToken({ req });
+  const session = req.auth;
 
-  // Skip auth check for login pages
-  if (path === "/portal/login" || path === "/admin/login") {
-    return NextResponse.next();
-  }
+  if (path === "/portal/login" || path === "/admin/login") return;
 
-  // Admin routes: must be authenticated with admin role
   if (path.startsWith("/admin")) {
-    if (!token) {
+    if (!session) {
       const loginUrl = new URL("/admin/login", req.url);
       loginUrl.searchParams.set("callbackUrl", req.url);
       return NextResponse.redirect(loginUrl);
     }
-    if (token.role !== "admin") {
+    if (session.user?.role !== "admin") {
       return NextResponse.redirect(new URL("/", req.url));
     }
   }
 
-  // Portal routes: must be authenticated with member role
   if (path.startsWith("/portal")) {
-    if (!token || token.role !== "member") {
+    if (!session || session.user?.role !== "member") {
       const loginUrl = new URL("/portal/login", req.url);
       loginUrl.searchParams.set("callbackUrl", req.url);
       return NextResponse.redirect(loginUrl);
     }
   }
-
-  return NextResponse.next();
-}
+});
 
 export const config = {
   matcher: ["/admin/:path*", "/portal/:path*", "/api/admin/:path*"],
