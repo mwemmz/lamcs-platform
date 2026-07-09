@@ -6,7 +6,6 @@ import { useCart } from "@/lib/cart-context";
 import { Button, Card } from "@/components/ui";
 import Link from "next/link";
 
-export const runtime = 'edge';
 
 interface Listing {
   id: string;

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { Reveal } from "@/components/ui";
 
-export const runtime = 'edge';
 
 export const dynamic = "force-dynamic";
 

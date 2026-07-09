@@ -49,6 +49,9 @@ export default function AdminLoginPage() {
           />
           {error && <p className="text-sm text-red-600">{error}</p>}
           <Button type="submit" className="w-full">Sign In</Button>
+          <a href="/admin/reset" className="block text-center text-sm text-avocado-skin underline">
+            Forgot password?
+          </a>
         </form>
       </div>
     </div>

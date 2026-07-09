@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 
-export const runtime = 'edge';
 
 export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
   const listing = await prisma.produceListing.findUnique({ where: { id: params.id } });

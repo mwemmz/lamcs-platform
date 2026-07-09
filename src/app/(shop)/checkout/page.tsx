@@ -159,6 +159,7 @@ export default function CheckoutPage() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16">
       <h1 className="font-serif text-3xl text-avocado-skin">Checkout</h1>
+      <p className="mt-1 text-sm text-ink/50">Checking out as guest — no account required.</p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-6">
         <CardSection title="Buyer Details">
