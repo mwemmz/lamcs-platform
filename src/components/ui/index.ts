@@ -5,3 +5,5 @@ export { Toggle } from "./toggle";
 export { TiltCard } from "./tilt-card";
 export { Reveal } from "./reveal";
 export { StatusBadge, statusTone } from "./status-badge";
+export { GlassCard } from "./glass-card";
+export { GlassBadge } from "./glass-badge";

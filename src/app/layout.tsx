@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import { CartProvider } from "@/lib/cart-context";
 import "./globals.css";
+import "@/styles/glass.css";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
