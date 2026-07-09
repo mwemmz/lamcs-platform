@@ -4,6 +4,7 @@ import { prisma } from "./prisma";
 import type { NextAuthConfig } from "next-auth";
 
 export const authConfig: NextAuthConfig = {
+  trustHost: true,
   providers: [
     CredentialsProvider({
       id: "member-login",
