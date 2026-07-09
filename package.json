@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma generate && npx prisma db push && npx prisma db seed && next build",
+    "build": "npx prisma generate && next build",
+"render:build": "npx prisma generate && npx prisma db push && npx prisma db seed && next build",
     "start": "next start",
     "lint": "next lint",
     "db:generate": "prisma generate",
