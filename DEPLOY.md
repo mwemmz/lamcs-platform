@@ -19,6 +19,7 @@ Set these in Render Dashboard → Environment:
 | `DATABASE_URL` | Your Render PostgreSQL connection string (see §3) |
 | `NEXTAUTH_SECRET` | `openssl rand -base64 32` output |
 | `NEXTAUTH_URL` | `https://your-app.onrender.com` |
+| `AUTH_TRUST_HOST` | `true` |
 | `MTN_MOMO_SUBSCRIPTION_KEY` | MTN MoMo subscription key (optional for sandbox) |
 | `MTN_MOMO_API_USER` | MTN MoMo API user |
 | `MTN_MOMO_API_KEY` | MTN MoMo API key |
@@ -30,16 +31,6 @@ Set these in Render Dashboard → Environment:
 
 1. In Render Dashboard, create a new **PostgreSQL** database.
 2. Copy the **Internal Database URL** into `DATABASE_URL`.
-3. After first deploy, SSH into Render shell and run:
-   ```bash
-   npx prisma db push
-   npx prisma db seed
-   ```
-   Or set `DATABASE_URL` locally and run:
-   ```bash
-   npx prisma db push
-   npx prisma db seed
-   ```
 
 ---
 
@@ -48,10 +39,11 @@ Set these in Render Dashboard → Environment:
 1. In Render Dashboard → **New Web Service**.
 2. Connect your GitHub repo (`mwemmz/lamcs-platform`).
 3. Configure:
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm install && npm run render:build`
    - **Start Command**: `npm start`
 4. Add all environment variables from §2.
 5. Click **Create Web Service**.
+6. After first deploy, check logs for seed output — schema push + seed run automatically during build via `render:build`.
 
 Render will build and deploy automatically.
 

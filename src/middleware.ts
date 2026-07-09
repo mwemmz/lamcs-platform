@@ -16,10 +16,8 @@ interface SessionPayload {
 }
 
 async function getSession(req: NextRequest): Promise<SessionPayload | null> {
-  const cookieName = req.url.startsWith("https")
-    ? "__Secure-next-auth.session-token"
-    : "next-auth.session-token";
-  const token = req.cookies.get(cookieName)?.value;
+  const token = req.cookies.get("__Secure-next-auth.session-token")?.value
+  || req.cookies.get("next-auth.session-token")?.value;
   if (!token) return null;
   try {
     const { payload } = await jwtVerify(token, getSecret(), { algorithms: ["HS256"] });
@@ -57,5 +55,5 @@ export default async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*", "/portal/:path*", "/api/admin/:path*"],
+  matcher: ["/admin/:path*", "/portal/:path*"],
 };
