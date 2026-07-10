@@ -23,10 +23,11 @@ export function EcommerceVideoBg({ children }: EcommerceVideoBgProps) {
     typeof window !== "undefined" &&
     window.matchMedia("(max-width: 767px)").matches;
 
-  const isSlowConnection =
-    typeof window !== "undefined" &&
-    "connection" in navigator &&
-    ["slow-2g", "2g"].includes((navigator as any).connection?.effectiveType);
+  const conn =
+    typeof window !== "undefined" && "connection" in navigator
+      ? (navigator as Navigator & { connection: { effectiveType: string } }).connection
+      : null;
+  const isSlowConnection = conn ? ["slow-2g", "2g"].includes(conn.effectiveType) : false;
 
   const shouldPlay = isMember && !prefersReducedMotion && !isMobile && !isSlowConnection && !errored;
 
