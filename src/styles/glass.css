@@ -54,12 +54,12 @@
   box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.4);
   overflow: hidden;
 }
-/* lighter variant for cards over dark video overlay — lets the video peek through more */
+/* lighter variant — avocado-flesh green glass, used over the video / dark sections */
 .glass-surface--light {
-  background: rgba(244, 240, 228, 0.78);
+  background: rgba(132, 162, 79, 0.45);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(53, 64, 38, 0.15);
   box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.3);
 }
 /* fine vertical-stripe noise overlay */
