@@ -31,7 +31,7 @@ export default function ProduceDetailPage({ params }: { params: { id: string } }
       .then((data) => { setListing(data); setLoading(false); });
   }, [params.id]);
 
-  if (loading) return <div className="mx-auto max-w-4xl px-4 py-16 text-surface/45">Loading...</div>;
+  if (loading) return <div className="mx-auto max-w-4xl px-4 py-16 text-ink/40">Loading...</div>;
   if (!listing || listing.status !== "ACTIVE") return notFound();
 
   const images: string[] = (() => { try { return JSON.parse(listing.images); } catch { return []; } })();
@@ -51,9 +51,9 @@ export default function ProduceDetailPage({ params }: { params: { id: string } }
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
-      <Link href="/produce" className="text-sm text-surface hover:underline">&larr; Back to produce</Link>
+      <Link href="/produce" className="text-sm text-pit hover:underline">&larr; Back to produce</Link>
       <div className="mt-6 grid gap-8 md:grid-cols-2">
-        <div className="aspect-square rounded-xl bg-surface/10 border border-line flex items-center justify-center text-surface/35">
+        <div className="aspect-square rounded-xl bg-avocado-flesh/10 border border-line flex items-center justify-center text-ink/30">
           {images[0] ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={images[0]} alt={listing.name} className="rounded-xl object-cover w-full h-full" />
@@ -63,16 +63,16 @@ export default function ProduceDetailPage({ params }: { params: { id: string } }
         </div>
         <div>
           <div className="flex items-center gap-3">
-            <span className="rounded-full bg-surface/20 px-3 py-1 text-xs font-semibold text-surface">
+            <span className="rounded-full bg-avocado-flesh/20 px-3 py-1 text-xs font-semibold text-avocado-skin">
               {listing.grade}
             </span>
-            <span className="text-xs text-surface/45 capitalize">{listing.category}</span>
+            <span className="text-xs text-ink/40 capitalize">{listing.category}</span>
           </div>
-          <h1 className="mt-3 font-serif text-3xl text-surface">{listing.name}</h1>
-          <p className="mt-4 font-mono text-2xl text-surface">
+          <h1 className="mt-3 font-serif text-3xl text-avocado-skin">{listing.name}</h1>
+          <p className="mt-4 font-mono text-2xl text-pit">
             ZMW {Number(listing.price).toFixed(2)} / kg
           </p>
-          <p className="mt-1 text-sm text-surface/55">
+          <p className="mt-1 text-sm text-ink/50">
             {Number(listing.quantityKg).toFixed(0)} kg available
           </p>
           <Card className="mt-6">

@@ -45,7 +45,7 @@ export default function AdminMembersPage() {
   return (
     <>
       <div className="flex items-center justify-between">
-        <h1 className="font-serif text-3xl text-surface">Members</h1>
+        <h1 className="font-serif text-3xl text-avocado-skin">Members</h1>
         <Button onClick={() => setShowForm(true)}>Add Member</Button>
       </div>
 

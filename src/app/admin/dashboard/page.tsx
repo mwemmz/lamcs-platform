@@ -15,11 +15,11 @@ export default function AdminDashboardPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-surface">Admin Dashboard</h1>
-      <p className="mt-1 text-surface/65">Cooperative overview at a glance.</p>
+      <h1 className="font-serif text-3xl text-avocado-skin">Admin Dashboard</h1>
+      <p className="mt-1 text-ink/60">Cooperative overview at a glance.</p>
 
       {loading ? (
-        <p className="mt-8 text-surface/45">Loading...</p>
+        <p className="mt-8 text-ink/40">Loading...</p>
       ) : (
         <>
           <div className="mt-8 grid gap-6 md:grid-cols-4">

@@ -38,7 +38,7 @@ export default function AdminOrdersPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-surface">Orders</h1>
+      <h1 className="font-serif text-3xl text-avocado-skin">Orders</h1>
 
       <Card className="mt-6 overflow-x-auto">
         <table className="w-full text-sm">

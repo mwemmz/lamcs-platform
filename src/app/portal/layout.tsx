@@ -28,9 +28,9 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
       <main
           className="min-h-[60vh]"
           style={{
-            backgroundColor: "rgba(35, 43, 28, 0.60)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
+            background: "linear-gradient(180deg, rgba(132, 162, 79, 0.25) 0%, rgba(53, 64, 38, 0.10) 100%)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
           }}
         >
         <div className="mx-auto max-w-6xl px-4 py-8">{children}</div>

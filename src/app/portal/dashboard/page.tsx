@@ -40,13 +40,13 @@ export default function PortalDashboardPage() {
   }, [session]);
 
   if (!member) {
-    return <p className="text-surface/45">Loading...</p>;
+    return <p className="text-ink/40">Loading...</p>;
   }
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-surface">Welcome back, {member.name}</h1>
-      <p className="mt-1 text-surface/65">Here&apos;s your account overview.</p>
+      <h1 className="font-serif text-3xl text-avocado-skin">Welcome back, {member.name}</h1>
+      <p className="mt-1 text-ink/60">Here&apos;s your account overview.</p>
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         <Card>

@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
         </Reveal>
 
-      <div className="mt-20 space-y-20 text-surface/80 leading-relaxed md:mt-28">
+      <div className="mt-20 space-y-20 text-ink/80 leading-relaxed md:mt-28">
         <Reveal>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="glass-card-strong p-8 md:p-10">

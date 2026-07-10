@@ -55,11 +55,11 @@ export default function AdminContentPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-surface">Content Pages</h1>
-      <p className="mt-1 text-surface/65">Manage marketing site pages and news articles.</p>
+      <h1 className="font-serif text-3xl text-avocado-skin">Content Pages</h1>
+      <p className="mt-1 text-ink/60">Manage marketing site pages and news articles.</p>
 
       {loading ? (
-        <p className="mt-6 text-surface/45">Loading...</p>
+        <p className="mt-6 text-ink/40">Loading...</p>
       ) : (
         <div className="mt-6 space-y-4">
           {pages.map((p) => (

@@ -15,8 +15,8 @@ export default function AdminReportsPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-surface">Reports</h1>
-      <p className="mt-1 text-surface/65">Export Cooperative data as CSV.</p>
+      <h1 className="font-serif text-3xl text-avocado-skin">Reports</h1>
+      <p className="mt-1 text-ink/60">Export Cooperative data as CSV.</p>
 
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         {reports.map((r) => (

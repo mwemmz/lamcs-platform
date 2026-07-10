@@ -74,7 +74,7 @@ export default function AdminListingsPage() {
   return (
     <>
       <div className="flex items-center justify-between">
-        <h1 className="font-serif text-3xl text-surface">Produce Listings</h1>
+        <h1 className="font-serif text-3xl text-avocado-skin">Produce Listings</h1>
         <Button onClick={() => { setShowForm(true); setEditing(null); setForm(emptyForm); }}>
           New Listing
         </Button>

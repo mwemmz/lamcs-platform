@@ -50,11 +50,11 @@ export default function PortalProfilePage() {
     setEditing(false);
   }
 
-  if (!member) return <p className="text-surface/45">Loading...</p>;
+  if (!member) return <p className="text-ink/40">Loading...</p>;
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-surface">My Profile</h1>
+      <h1 className="font-serif text-3xl text-avocado-skin">My Profile</h1>
       <Card className="mt-6 max-w-xl">
         {editing ? (
           <form onSubmit={handleSave} className="space-y-4">

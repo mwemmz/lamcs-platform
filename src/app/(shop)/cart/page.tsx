@@ -10,7 +10,7 @@ export default function CartPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
       <div className="flex items-center justify-between">
-        <h1 className="font-serif text-3xl text-surface">Your Cart</h1>
+        <h1 className="font-serif text-3xl text-avocado-skin">Your Cart</h1>
         {items.length > 0 && (
           <Button variant="secondary" onClick={clearCart}>Clear Cart</Button>
         )}
@@ -18,7 +18,7 @@ export default function CartPage() {
 
       {items.length === 0 ? (
         <div className="mt-16 text-center">
-          <p className="text-surface/55">Your cart is empty.</p>
+          <p className="text-ink/50">Your cart is empty.</p>
           <Link href="/produce">
             <Button className="mt-4">Browse Produce</Button>
           </Link>
