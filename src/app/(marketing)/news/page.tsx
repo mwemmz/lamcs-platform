@@ -29,20 +29,20 @@ export default function NewsPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
-      <h1 className="font-serif text-4xl text-avocado-skin">News & Announcements</h1>
-      <p className="mt-2 text-ink/70">
+      <h1 className="font-serif text-4xl text-surface">News & Announcements</h1>
+      <p className="mt-2 text-surface/75">
         Updates from the Cooperative and the Zambian avocado sector.
       </p>
       <div className="mt-10 space-y-6">
         {loading ? (
-          <p className="text-ink/40">Loading...</p>
+          <p className="text-surface/45">Loading...</p>
         ) : articles.length === 0 ? (
           [1, 2, 3].map((i) => (
             <article key={i} className="glass-card p-6">
-              <h2 className="font-serif text-xl text-pit">
+              <h2 className="font-serif text-xl text-surface">
                 Announcement Title {i}
               </h2>
-              <p className="mt-2 text-sm text-ink/70">
+              <p className="mt-2 text-sm text-surface/75">
                 This is a sample news article. Content from the Cooperative will appear here
                 once published through the admin panel.
               </p>
@@ -51,11 +51,11 @@ export default function NewsPage() {
         ) : (
           articles.map((a) => (
             <article key={a.slug} className="glass-card p-6">
-              <p className="font-mono text-xs text-pit">
+              <p className="font-mono text-xs text-surface/70">
                 {new Date(a.updatedAt).toLocaleDateString()}
               </p>
-              <h2 className="mt-1 font-serif text-xl text-pit">{a.title}</h2>
-              <p className="mt-2 text-sm text-ink/70 whitespace-pre-line">{a.body}</p>
+              <h2 className="mt-1 font-serif text-xl text-surface">{a.title}</h2>
+              <p className="mt-2 text-sm text-surface/75 whitespace-pre-line">{a.body}</p>
             </article>
           ))
         )}

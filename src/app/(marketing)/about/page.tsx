@@ -22,9 +22,9 @@ export default function AboutPage() {
     <div className="mx-auto max-w-4xl px-4 py-20 md:py-28">
         <Reveal>
           <div className="glass-surface--light rounded-3xl p-10 md:p-16">
-            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Our Story</span>
-            <h1 className="mt-4 font-serif text-4xl md:text-5xl text-pit">About LAMCS</h1>
-            <p className="mt-4 text-lg text-ink max-w-2xl">
+            <span className="inline-block rounded-full bg-surface/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-surface">Our Story</span>
+            <h1 className="mt-4 font-serif text-4xl md:text-5xl text-surface">About LAMCS</h1>
+            <p className="mt-4 text-lg text-surface/85 max-w-2xl">
               The Lusaka Avocado Multipurpose Cooperative Society Limited was founded
               by smallholder avocado farmers in Lusaka Province, Zambia, to collectively market
               their produce, access better prices, and build a sustainable value chain.
@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
         </Reveal>
 
-      <div className="mt-20 space-y-20 text-ink/80 leading-relaxed md:mt-28">
+      <div className="mt-20 space-y-20 text-surface/80 leading-relaxed md:mt-28">
         <Reveal>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="glass-card-strong p-8 md:p-10">
@@ -56,9 +56,9 @@ export default function AboutPage() {
 
         <Reveal>
           <div className="glass-surface--light rounded-3xl px-8 py-14 md:px-14 md:py-20">
-            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Governance</span>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-pit">Farmer-Led, Farmer-Owned</h2>
-            <p className="mt-4 max-w-2xl text-lg text-ink/80">
+            <span className="inline-block rounded-full bg-surface/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-surface">Governance</span>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-surface">Farmer-Led, Farmer-Owned</h2>
+            <p className="mt-4 max-w-2xl text-lg text-surface/80">
               The Cooperative is managed by a Board elected at the Annual General Meeting.
               Day-to-day operations are handled by a secretariat led by a General Manager,
               supported by field officers who work directly with member farmers.
@@ -68,9 +68,9 @@ export default function AboutPage() {
 
         <Reveal>
           <div className="glass-surface--light rounded-3xl px-8 py-14 md:px-14 md:py-20 shadow-xl shadow-pit/20">
-            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Membership</span>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-pit">Join the Cooperative</h2>
-            <p className="mt-4 max-w-2xl text-lg text-ink/85">
+            <span className="inline-block rounded-full bg-surface/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-surface">Membership</span>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-surface">Join the Cooperative</h2>
+            <p className="mt-4 max-w-2xl text-lg text-surface/85">
               Membership is open to any avocado farmer in Zambia. Members contribute a
               portion of their harvest to the Cooperative and receive payouts based on
               quantity and grade delivered.

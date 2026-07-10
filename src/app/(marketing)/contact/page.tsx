@@ -34,15 +34,15 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
-      <h1 className="font-serif text-4xl text-avocado-skin">Contact Us</h1>
-      <p className="mt-2 text-ink/70">
+      <h1 className="font-serif text-4xl text-surface">Contact Us</h1>
+      <p className="mt-2 text-surface/75">
         Get in touch with the Cooperative secretariat.
       </p>
       <div className="mt-10 grid gap-12 md:grid-cols-2">
         <div>
-          <h2 className="font-serif text-xl text-avocado-skin">Send a message</h2>
+          <h2 className="font-serif text-xl text-surface">Send a message</h2>
           {submitted ? (
-            <div className="mt-4 rounded-lg bg-pit/10 backdrop-blur-sm border border-pit/30 p-4 text-sm text-pit">
+            <div className="mt-4 rounded-lg bg-surface/15 backdrop-blur-sm border border-surface/30 p-4 text-sm text-surface">
               Thank you! Your message has been sent. We will get back to you shortly.
             </div>
           ) : (
@@ -60,7 +60,7 @@ export default function ContactPage() {
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="min-h-[44px] rounded-lg border border-line bg-surface px-4 py-2 text-ink placeholder:text-ink-soft/70 focus:outline-none focus:ring-2 focus:ring-avocado-flesh"
+                  className="min-h-[44px] rounded-lg border border-line bg-surface px-4 py-2 text-ink placeholder:text-ink-soft/70 focus:outline-none focus:ring-2 focus:ring-surface"
                   placeholder="How can we help?"
                   required
                 />
@@ -73,7 +73,7 @@ export default function ContactPage() {
           )}
         </div>
         <div>
-          <h2 className="font-serif text-xl text-avocado-skin">Visit us</h2>
+          <h2 className="font-serif text-xl text-surface">Visit us</h2>
           <div className="mt-4 glass-card-strong p-6 space-y-4 text-sm text-surface/75">
             <p>
               <strong className="text-surface">Office:</strong>

@@ -3,11 +3,11 @@ import { ReactNode } from "react";
 type Tone = "success" | "pending" | "info" | "danger" | "neutral";
 
 const tones: Record<Tone, string> = {
-  success: "bg-avocado-flesh/25 text-avocado-skin",
-  pending: "bg-pit/15 text-pit",
-  info: "bg-avocado-skin/15 text-avocado-skin",
-  danger: "bg-red-500/15 text-red-700",
-  neutral: "bg-surface-2 text-ink-soft",
+  success: "bg-surface/20 text-surface",
+  pending: "bg-surface/15 text-surface/80",
+  info: "bg-surface/15 text-surface",
+  danger: "bg-red-500/20 text-red-200",
+  neutral: "bg-surface/10 text-surface/60",
 };
 
 const toneLabels: Partial<Record<Tone, string>> = {

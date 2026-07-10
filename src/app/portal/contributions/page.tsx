@@ -26,13 +26,13 @@ export default function PortalContributionsPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">My Contributions</h1>
-      <p className="mt-1 text-ink/60">Records of produce you&apos;ve delivered to the Cooperative.</p>
+      <h1 className="font-serif text-3xl text-surface">My Contributions</h1>
+      <p className="mt-1 text-surface/65">Records of produce you&apos;ve delivered to the Cooperative.</p>
 
       <Card className="mt-6 overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-line text-left text-ink/50">
+            <tr className="border-b border-line text-left text-surface/55">
               <th className="pb-3 font-medium">Date</th>
               <th className="pb-3 font-medium">Produce</th>
               <th className="pb-3 font-medium">Grade</th>
@@ -41,20 +41,20 @@ export default function PortalContributionsPage() {
           </thead>
           <tbody>
             {loading ? (
-              <tr><td colSpan={4} className="py-8 text-center text-ink/40">Loading...</td></tr>
+              <tr><td colSpan={4} className="py-8 text-center text-surface/45">Loading...</td></tr>
             ) : contributions.length === 0 ? (
-              <tr><td colSpan={4} className="py-8 text-center text-ink/40">No contributions recorded yet.</td></tr>
+              <tr><td colSpan={4} className="py-8 text-center text-surface/45">No contributions recorded yet.</td></tr>
             ) : (
               contributions.map((c) => (
                 <tr key={c.id} className="border-b border-line/50">
-                  <td className="py-3 font-mono text-xs">{new Date(c.deliveredAt).toLocaleDateString()}</td>
-                  <td className="py-3">{c.produceType}</td>
+                  <td className="py-3 font-mono text-xs text-surface">{new Date(c.deliveredAt).toLocaleDateString()}</td>
+                  <td className="py-3 text-surface">{c.produceType}</td>
                   <td className="py-3">
-                    <span className="rounded-full bg-pit/15 px-2 py-0.5 text-xs font-semibold text-pit">
+                    <span className="rounded-full bg-surface/20 px-2 py-0.5 text-xs font-semibold text-surface">
                       {c.grade}
                     </span>
                   </td>
-                  <td className="py-3 font-mono text-right">{Number(c.quantityKg).toLocaleString()}</td>
+                  <td className="py-3 font-mono text-right text-surface">{Number(c.quantityKg).toLocaleString()}</td>
                 </tr>
               ))
             )}

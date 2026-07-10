@@ -10,7 +10,7 @@ export default function CartPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
       <div className="flex items-center justify-between">
-        <h1 className="font-serif text-3xl text-avocado-skin">Your Cart</h1>
+        <h1 className="font-serif text-3xl text-surface">Your Cart</h1>
         {items.length > 0 && (
           <Button variant="secondary" onClick={clearCart}>Clear Cart</Button>
         )}
@@ -18,7 +18,7 @@ export default function CartPage() {
 
       {items.length === 0 ? (
         <div className="mt-16 text-center">
-          <p className="text-ink/50">Your cart is empty.</p>
+          <p className="text-surface/55">Your cart is empty.</p>
           <Link href="/produce">
             <Button className="mt-4">Browse Produce</Button>
           </Link>
@@ -31,12 +31,12 @@ export default function CartPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
-                      <p className="font-serif text-lg text-avocado-skin">{item.name}</p>
-                      <span className="rounded-full bg-pit/15 px-2 py-0.5 text-xs font-semibold text-pit">
+                      <p className="font-serif text-lg text-surface">{item.name}</p>
+                      <span className="rounded-full bg-surface/20 px-2 py-0.5 text-xs font-semibold text-surface">
                         {item.grade}
                       </span>
                     </div>
-                    <p className="font-mono text-sm text-pit mt-1">
+                    <p className="font-mono text-sm text-surface mt-1">
                       ZMW {item.price.toFixed(2)} / kg
                     </p>
                   </div>
@@ -44,24 +44,24 @@ export default function CartPage() {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => updateQuantity(item.listingId, item.quantityKg - 1)}
-                        className="min-h-[44px] min-w-[44px] rounded-lg border border-line bg-bg text-ink hover:bg-line/30"
+                        className="min-h-[44px] min-w-[44px] rounded-lg border border-line bg-surface text-ink hover:bg-line/30"
                       >
                         &minus;
                       </button>
                       <span className="font-mono text-lg w-12 text-center">{item.quantityKg}</span>
                       <button
                         onClick={() => updateQuantity(item.listingId, item.quantityKg + 1)}
-                        className="min-h-[44px] min-w-[44px] rounded-lg border border-line bg-bg text-ink hover:bg-line/30"
+                        className="min-h-[44px] min-w-[44px] rounded-lg border border-line bg-surface text-ink hover:bg-line/30"
                       >
                         +
                       </button>
                     </div>
-                    <p className="font-mono text-lg text-pit w-28 text-right">
+                    <p className="font-mono text-lg text-surface w-28 text-right">
                       ZMW {(item.price * item.quantityKg).toFixed(2)}
                     </p>
                     <button
                       onClick={() => removeItem(item.listingId)}
-                      className="min-h-[44px] min-w-[44px] text-ink/30 hover:text-red-500 text-xl"
+                      className="min-h-[44px] min-w-[44px] text-surface/40 hover:text-red-500 text-xl"
                       aria-label="Remove"
                     >
                       &times;
@@ -75,7 +75,7 @@ export default function CartPage() {
           <div className="mt-8 border-t border-line pt-6">
             <div className="flex items-center justify-between">
               <p className="text-lg font-semibold">
-                Total ({itemCount} kg): <span className="font-mono text-pit">ZMW {totalAmount.toFixed(2)}</span>
+                Total ({itemCount} kg): <span className="font-mono text-surface">ZMW {totalAmount.toFixed(2)}</span>
               </p>
             </div>
             <div className="mt-6 flex gap-4">

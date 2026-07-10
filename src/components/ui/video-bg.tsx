@@ -72,9 +72,9 @@ export function VideoBg({ children }: VideoBgProps) {
           <div
             className="absolute inset-0"
             style={{
-              backgroundColor: "rgba(53, 64, 38, 0.35)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
+              backgroundColor: "rgba(35, 43, 28, 0.50)",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
             }}
           />
           {/* subtle vignette */}
@@ -88,8 +88,8 @@ export function VideoBg({ children }: VideoBgProps) {
           className="fixed inset-0 z-0"
           style={{
             background:
-              "radial-gradient(ellipse 100% 80% at 0% 0%, rgba(132, 162, 79, 0.35), transparent 60%), " +
-              "linear-gradient(135deg, var(--color-avocado-flesh), var(--color-avocado-skin))",
+              "radial-gradient(ellipse 100% 80% at 0% 0%, rgba(53, 64, 38, 0.35), transparent 60%), " +
+              "linear-gradient(135deg, var(--color-avocado-skin), var(--color-pit))",
           }}
           aria-hidden="true"
         />

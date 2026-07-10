@@ -42,9 +42,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="glass-surface--light rounded-3xl p-10 md:p-16">
             <div className="text-center scroll-reveal">
-              <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">From Our Farms</span>
-              <h2 className="mt-4 font-serif text-4xl text-pit">Our Produce</h2>
-              <p className="mt-2 text-ink/70">Farm-fresh, graded, and delivered to you.</p>
+              <span className="inline-block rounded-full bg-surface/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-surface">From Our Farms</span>
+              <h2 className="mt-4 font-serif text-4xl text-surface">Our Produce</h2>
+              <p className="mt-2 text-surface/75">Farm-fresh, graded, and delivered to you.</p>
             </div>
             <div className="mt-14 grid gap-8 md:grid-cols-3">
             {[
@@ -73,9 +73,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="glass-surface--light rounded-3xl p-10 md:p-16 text-center">
             <div className="scroll-reveal">
-              <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Why Join</span>
-              <h2 className="mt-4 font-serif text-4xl text-pit">Why LAMCS?</h2>
-              <p className="mt-2 text-ink/70">A cooperative built for and by Zambian avocado growers.</p>
+              <span className="inline-block rounded-full bg-surface/20 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-surface">Why Join</span>
+              <h2 className="mt-4 font-serif text-4xl text-surface">Why LAMCS?</h2>
+              <p className="mt-2 text-surface/75">A cooperative built for and by Zambian avocado growers.</p>
             </div>
             <div className="mt-14 grid gap-8 md:grid-cols-3">
               {[
@@ -98,8 +98,8 @@ export default function HomePage() {
       <section className="py-28">
         <div className="mx-auto max-w-6xl px-4">
           <div className="glass-surface--light rounded-3xl px-8 py-16 md:px-16 md:py-20 text-center scroll-reveal shadow-xl shadow-pit/20">
-            <h2 className="font-serif text-4xl md:text-5xl text-pit">Ready to get involved?</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-lg text-ink/85">Whether you&apos;re a farmer, a buyer, or a partner — there&apos;s a place for you at LAMCS.</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-surface">Ready to get involved?</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-lg text-surface/85">Whether you&apos;re a farmer, a buyer, or a partner — there&apos;s a place for you at LAMCS.</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link href="/contact">
                 <Button variant="ghost-pit" trailingIcon={<ArrowRight />}>Contact Us</Button>

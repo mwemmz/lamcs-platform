@@ -6,7 +6,7 @@
 
 /* ---------- gradient section backgrounds ---------- */
 .bg-gradient-flesh-skin {
-  background: linear-gradient(135deg, var(--color-avocado-flesh), var(--color-avocado-skin));
+  background: linear-gradient(135deg, var(--color-avocado-skin), var(--color-pit));
 }
 .bg-gradient-pit-skin {
   background: linear-gradient(135deg, var(--color-pit), var(--color-avocado-skin));
@@ -14,8 +14,8 @@
 /* lit-corner variant — brighter in top-left */
 .bg-gradient-flesh-skin--lit {
   background:
-    radial-gradient(ellipse 100% 80% at 0% 0%, rgba(132, 162, 79, 0.35), transparent 60%),
-    linear-gradient(135deg, var(--color-avocado-flesh), var(--color-avocado-skin));
+    radial-gradient(ellipse 100% 80% at 0% 0%, rgba(53, 64, 38, 0.35), transparent 60%),
+    linear-gradient(135deg, var(--color-avocado-skin), var(--color-pit));
 }
 .bg-gradient-pit-skin--lit {
   background:
@@ -37,7 +37,7 @@
   background: rgba(244, 240, 228, 0.2);
 }
 .glass-blob--flesh {
-  background: var(--color-avocado-flesh);
+  background: var(--color-surface);
 }
 .glass-blob--pit {
   background: var(--color-pit);
@@ -46,7 +46,7 @@
 /* ---------- glass surface (the core card panel) ---------- */
 .glass-surface {
   position: relative;
-  background: rgba(53, 64, 38, 0.75);
+  background: rgba(35, 43, 28, 0.65);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.10);
@@ -54,19 +54,19 @@
   box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.4);
   overflow: hidden;
 }
-/* lighter variant — avocado-flesh green glass, used over the video / dark sections */
+/* lighter ink variant — slightly more transparent for visual depth */
 .glass-surface--light {
-  background: rgba(132, 162, 79, 0.55);
+  background: rgba(35, 43, 28, 0.45);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(53, 64, 38, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.3);
 }
 
 /* warm accent variant — pit brown glass for section variety */
 .glass-surface--warm {
   position: relative;
-  background: rgba(156, 85, 35, 0.60);
+  background: rgba(35, 43, 28, 0.55);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.10);
@@ -94,15 +94,14 @@
   overflow: visible;
 }
 
-/* ---------- text hierarchy on glass ---------- */
-/* On dark glass (skin green) — use light text */
+/* ---------- text hierarchy on glass (all glass is now dark) ---------- */
 .glass-eyebrow {
   display: inline-block;
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-avocado-flesh);
+  color: var(--color-surface);
 }
 .glass-headline {
   font-weight: 700;
@@ -110,20 +109,13 @@
   line-height: 1.15;
 }
 .glass-body {
-  color: rgba(244, 240, 228, 0.75);
+  color: rgba(244, 240, 228, 0.80);
   line-height: 1.6;
 }
 .glass-body a {
-  color: var(--color-avocado-flesh);
+  color: var(--color-surface);
   text-decoration: underline;
   text-underline-offset: 2px;
-}
-/* On light glass (flesh green) — use dark text */
-.glass-headline--dark {
-  color: var(--color-pit);
-}
-.glass-body--dark {
-  color: var(--color-ink);
 }
 
 /* ---------- dashed divider ---------- */
@@ -142,10 +134,10 @@
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(244, 240, 228, 0.12);
+  background: rgba(244, 240, 228, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: var(--color-surface);
 }
 

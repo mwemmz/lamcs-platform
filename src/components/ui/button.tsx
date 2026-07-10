@@ -16,9 +16,9 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-pit text-white hover:bg-[#8f5523] motion-safe:hover:shadow-[0_8px_24px_rgba(156,85,35,0.28)]",
   secondary:
-    "border-2 border-avocado-skin text-avocado-skin hover:bg-avocado-skin hover:text-white motion-safe:hover:shadow-[0_8px_24px_rgba(53,64,38,0.18)]",
+    "border-2 border-white/30 text-surface hover:bg-white/10 motion-safe:hover:shadow-[0_8px_24px_rgba(244,240,228,0.08)]",
   "ghost-light":
-    "border-2 border-[#F4F0E4] text-[#F4F0E4] hover:bg-[#F4F0E4] hover:text-avocado-skin motion-safe:hover:shadow-[0_8px_24px_rgba(244,240,228,0.18)]",
+    "border-2 border-surface text-surface hover:bg-surface/10 motion-safe:hover:shadow-[0_8px_24px_rgba(244,240,228,0.10)]",
   "ghost-pit":
     "border-2 border-pit text-pit hover:bg-pit hover:text-white motion-safe:hover:shadow-[0_8px_24px_rgba(156,85,35,0.2)]",
   "solid-white":

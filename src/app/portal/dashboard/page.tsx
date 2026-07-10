@@ -40,32 +40,32 @@ export default function PortalDashboardPage() {
   }, [session]);
 
   if (!member) {
-    return <p className="text-ink/40">Loading...</p>;
+    return <p className="text-surface/45">Loading...</p>;
   }
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">Welcome back, {member.name}</h1>
-      <p className="mt-1 text-ink/60">Here&apos;s your account overview.</p>
+      <h1 className="font-serif text-3xl text-surface">Welcome back, {member.name}</h1>
+      <p className="mt-1 text-surface/65">Here&apos;s your account overview.</p>
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         <Card>
-          <p className="text-xs text-ink/50 uppercase tracking-wide">Total Contributions</p>
-          <p className="mt-1 font-mono text-2xl text-pit">{stats.contributions.toLocaleString()} kg</p>
+          <p className="text-xs text-surface/55 uppercase tracking-wide">Total Contributions</p>
+          <p className="mt-1 font-mono text-2xl text-surface">{stats.contributions.toLocaleString()} kg</p>
         </Card>
         <Card>
-          <p className="text-xs text-ink/50 uppercase tracking-wide">Pending Payouts</p>
-          <p className="mt-1 font-mono text-2xl text-pit">ZMW {stats.pendingPayouts.toFixed(2)}</p>
+          <p className="text-xs text-surface/55 uppercase tracking-wide">Pending Payouts</p>
+          <p className="mt-1 font-mono text-2xl text-surface">ZMW {stats.pendingPayouts.toFixed(2)}</p>
         </Card>
         <Card>
-          <p className="text-xs text-ink/50 uppercase tracking-wide">Membership Status</p>
-          <p className="mt-1 font-semibold text-avocado-flesh capitalize">{member.status.toLowerCase()}</p>
+          <p className="text-xs text-surface/55 uppercase tracking-wide">Membership Status</p>
+          <p className="mt-1 font-semibold text-surface capitalize">{member.status.toLowerCase()}</p>
         </Card>
       </div>
 
       <Card className="mt-8">
-        <h2 className="font-serif text-lg text-avocado-skin">Recent Activity</h2>
-        <p className="mt-2 text-sm text-ink/50">
+        <h2 className="font-serif text-lg text-surface">Recent Activity</h2>
+        <p className="mt-2 text-sm text-surface/55">
           Your contributions and payouts will appear here as they are recorded.
         </p>
       </Card>

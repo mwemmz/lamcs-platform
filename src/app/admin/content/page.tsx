@@ -55,11 +55,11 @@ export default function AdminContentPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">Content Pages</h1>
-      <p className="mt-1 text-ink/60">Manage marketing site pages and news articles.</p>
+      <h1 className="font-serif text-3xl text-surface">Content Pages</h1>
+      <p className="mt-1 text-surface/65">Manage marketing site pages and news articles.</p>
 
       {loading ? (
-        <p className="mt-6 text-ink/40">Loading...</p>
+        <p className="mt-6 text-surface/45">Loading...</p>
       ) : (
         <div className="mt-6 space-y-4">
           {pages.map((p) => (
@@ -67,7 +67,7 @@ export default function AdminContentPage() {
               {editing === p.slug ? (
                 <div className="space-y-4">
                   <div>
-                    <label className="text-sm font-medium text-ink">Title</label>
+                    <label className="text-sm font-medium text-surface/85">Title</label>
                     <input
                       value={editTitle}
                       onChange={(e) => setEditTitle(e.target.value)}
@@ -75,7 +75,7 @@ export default function AdminContentPage() {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-ink">Body</label>
+                    <label className="text-sm font-medium text-surface/85">Body</label>
                     <textarea
                       rows={8}
                       value={editBody}
@@ -91,9 +91,9 @@ export default function AdminContentPage() {
               ) : (
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <p className="font-medium text-ink">{p.title}</p>
-                    <p className="font-mono text-xs text-ink/40">/{p.slug}</p>
-                    <p className="mt-2 text-sm text-ink/70 line-clamp-2">{p.body}</p>
+                    <p className="font-medium text-surface">{p.title}</p>
+                    <p className="font-mono text-xs text-surface/45">/{p.slug}</p>
+                    <p className="mt-2 text-sm text-surface/75 line-clamp-2">{p.body}</p>
                   </div>
                   <div className="flex items-center gap-3 ml-4">
                     <button

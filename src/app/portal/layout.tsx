@@ -19,13 +19,20 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
             <Link href="/" className="text-surface/50 hover:text-white transition-colors text-xs">
               ← Shop
             </Link>
-            <Link href="/api/auth/signout" className="text-avocado-flesh hover:text-white transition-colors">
+            <Link href="/api/auth/signout" className="text-surface/70 hover:text-white transition-colors">
               Sign Out
             </Link>
           </div>
         </nav>
       </header>
-      <main className="min-h-[60vh] bg-surface/60 backdrop-blur-xl">
+      <main
+          className="min-h-[60vh]"
+          style={{
+            backgroundColor: "rgba(35, 43, 28, 0.60)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+          }}
+        >
         <div className="mx-auto max-w-6xl px-4 py-8">{children}</div>
       </main>
     </SessionProvider>

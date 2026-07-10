@@ -15,14 +15,14 @@ export default function AdminReportsPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">Reports</h1>
-      <p className="mt-1 text-ink/60">Export Cooperative data as CSV.</p>
+      <h1 className="font-serif text-3xl text-surface">Reports</h1>
+      <p className="mt-1 text-surface/65">Export Cooperative data as CSV.</p>
 
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         {reports.map((r) => (
           <Card key={r.label}>
-            <h2 className="font-serif text-lg text-avocado-skin">{r.label}</h2>
-            <p className="mt-1 text-xs text-ink/50">Download all {r.label.toLowerCase()} data as CSV</p>
+            <h2 className="font-serif text-lg text-surface">{r.label}</h2>
+            <p className="mt-1 text-xs text-surface/55">Download all {r.label.toLowerCase()} data as CSV</p>
             <Button variant="secondary" className="mt-4 w-full" onClick={() => exportCSV(r.entity)}>
               Export CSV
             </Button>

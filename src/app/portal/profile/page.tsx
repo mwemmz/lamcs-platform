@@ -50,11 +50,11 @@ export default function PortalProfilePage() {
     setEditing(false);
   }
 
-  if (!member) return <p className="text-ink/40">Loading...</p>;
+  if (!member) return <p className="text-surface/45">Loading...</p>;
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">My Profile</h1>
+      <h1 className="font-serif text-3xl text-surface">My Profile</h1>
       <Card className="mt-6 max-w-xl">
         {editing ? (
           <form onSubmit={handleSave} className="space-y-4">
@@ -70,23 +70,23 @@ export default function PortalProfilePage() {
         ) : (
           <div className="space-y-4">
             <div>
-              <label className="text-sm font-medium text-ink">Full Name</label>
+              <label className="text-sm font-medium text-surface/85">Full Name</label>
               <p className="rounded-lg border border-line bg-surface-2 px-4 py-2 text-sm">{member.name}</p>
             </div>
             <div>
-              <label className="text-sm font-medium text-ink">Membership No.</label>
+              <label className="text-sm font-medium text-surface/85">Membership No.</label>
               <p className="rounded-lg border border-line bg-surface-2 px-4 py-2 font-mono text-sm">{member.membershipNo}</p>
             </div>
             <div>
-              <label className="text-sm font-medium text-ink">Phone</label>
+              <label className="text-sm font-medium text-surface/85">Phone</label>
               <p className="rounded-lg border border-line bg-surface-2 px-4 py-2 text-sm">{member.phone}</p>
             </div>
             <div>
-              <label className="text-sm font-medium text-ink">Email</label>
+              <label className="text-sm font-medium text-surface/85">Email</label>
               <p className="rounded-lg border border-line bg-surface-2 px-4 py-2 text-sm">{member.email || "—"}</p>
             </div>
             <div>
-              <label className="text-sm font-medium text-ink">Farm Location</label>
+              <label className="text-sm font-medium text-surface/85">Farm Location</label>
               <p className="rounded-lg border border-line bg-surface-2 px-4 py-2 text-sm">{member.farmLocation || "—"}</p>
             </div>
             <Button variant="secondary" onClick={() => setEditing(true)}>Edit Profile</Button>
