@@ -52,7 +52,15 @@
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 24px;
   box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.4);
-  overflow: hidden;   /* clips noise texture, floating child overflows via sibling */
+  overflow: hidden;
+}
+/* lighter variant for cards over dark video overlay — lets the video peek through more */
+.glass-surface--light {
+  background: rgba(244, 240, 228, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.3);
 }
 /* fine vertical-stripe noise overlay */
 .glass-surface::before {

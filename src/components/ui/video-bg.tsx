@@ -1,44 +1,30 @@
 "use client";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
-import { useSession } from "next-auth/react";
 
-interface EcommerceVideoBgProps {
+interface VideoBgProps {
   children: ReactNode;
 }
 
-export function EcommerceVideoBg({ children }: EcommerceVideoBgProps) {
-  const { data: session } = useSession();
+export function VideoBg({ children }: VideoBgProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [errored, setErrored] = useState(false);
-
-  const isMember = !!session?.user;
 
   const prefersReducedMotion =
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const isMobile =
-    typeof window !== "undefined" &&
-    window.matchMedia("(max-width: 767px)").matches;
+  const shouldPlay = !prefersReducedMotion && !errored;
 
-  const conn =
-    typeof window !== "undefined" && "connection" in navigator
-      ? (navigator as Navigator & { connection: { effectiveType: string } }).connection
-      : null;
-  const isSlowConnection = conn ? ["slow-2g", "2g"].includes(conn.effectiveType) : false;
-
-  const shouldPlay = isMember && !prefersReducedMotion && !isMobile && !isSlowConnection && !errored;
-
-  /* ---------- lazy-load video src after mount ---------- */
+  /* lazy-load video src after mount */
   useEffect(() => {
     if (!shouldPlay || !videoRef.current) return;
     videoRef.current.src = "/videos/ecommerce-bg.mp4";
     videoRef.current.load();
   }, [shouldPlay]);
 
-  /* ---------- Page Visibility — pause when tab hidden ---------- */
+  /* Page Visibility — pause when tab hidden */
   useEffect(() => {
     if (!shouldPlay) return;
     const el = videoRef.current;
@@ -51,7 +37,7 @@ export function EcommerceVideoBg({ children }: EcommerceVideoBgProps) {
     return () => document.removeEventListener("visibilitychange", handleVisibility);
   }, [shouldPlay]);
 
-  /* ---------- IntersectionObserver — pause when scrolled out of view ---------- */
+  /* IntersectionObserver — pause when scrolled out of view */
   useEffect(() => {
     if (!shouldPlay || !containerRef.current) return;
     const el = videoRef.current;
@@ -69,7 +55,7 @@ export function EcommerceVideoBg({ children }: EcommerceVideoBgProps) {
 
   return (
     <div ref={containerRef} className="relative min-h-screen">
-      {/* video + overlay */}
+      {/* video + blur overlay */}
       {shouldPlay && (
         <div className="fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
           <video
@@ -82,17 +68,21 @@ export function EcommerceVideoBg({ children }: EcommerceVideoBgProps) {
             onError={() => setErrored(true)}
             onCanPlay={(e) => { (e.target as HTMLVideoElement).play().catch(() => {}); }}
           />
-          {/* dark scrim — keeps content legible */}
+          {/* blurred glass scrim — blurs the video behind content while darkening it */}
           <div
             className="absolute inset-0"
-            style={{ backgroundColor: "rgba(53, 64, 38, 0.55)" }}
+            style={{
+              backgroundColor: "rgba(53, 64, 38, 0.35)",
+              backdropFilter: "blur(6px)",
+              WebkitBackdropFilter: "blur(6px)",
+            }}
           />
-          {/* soft vignette at top */}
+          {/* subtle vignette */}
           <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-black/10" />
         </div>
       )}
 
-      {/* fallback gradient (unauthenticated / slow / mobile / reduced-motion) */}
+      {/* fallback gradient */}
       {!shouldPlay && (
         <div
           className="fixed inset-0 z-0"

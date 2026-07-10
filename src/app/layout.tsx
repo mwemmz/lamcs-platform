@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
-import { CartProvider } from "@/lib/cart-context";
+import { GlobalLayout } from "@/components/ui/global-layout";
 import "./globals.css";
 import "@/styles/glass.css";
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
       <body className="font-sans bg-bg text-ink">
-        <CartProvider>{children}</CartProvider>
+        <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>
   );
