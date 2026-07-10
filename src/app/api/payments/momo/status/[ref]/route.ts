@@ -4,10 +4,11 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(
   _req: Request,
-  { params }: { params: { ref: string } }
+  { params }: { params: Promise<{ ref: string }> }
 ) {
+  const { ref } = await params;
   const payment = await prisma.payment.findFirst({
-    where: { providerRef: params.ref },
+    where: { providerRef: ref },
     include: { order: { select: { status: true, reference: true } } },
   });
 
