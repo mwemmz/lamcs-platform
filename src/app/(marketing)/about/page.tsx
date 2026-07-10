@@ -20,17 +20,17 @@ const ArrowIcon = () => (
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-20 md:py-28">
-      <Reveal>
-        <div className="rounded-2xl bg-gradient-to-br from-avocado-flesh/15 to-avocado-flesh/5 p-10 md:p-16">
-          <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Our Story</span>
-          <h1 className="mt-4 font-serif text-4xl md:text-5xl text-avocado-skin">About LAMCS</h1>
-          <p className="mt-4 text-lg text-ink max-w-2xl">
-            The Lusaka Avocado Multipurpose Cooperative Society Limited was founded
-            by smallholder avocado farmers in Lusaka Province, Zambia, to collectively market
-            their produce, access better prices, and build a sustainable value chain.
-          </p>
-        </div>
-      </Reveal>
+        <Reveal>
+          <div className="glass-surface--light rounded-3xl p-10 md:p-16">
+            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Our Story</span>
+            <h1 className="mt-4 font-serif text-4xl md:text-5xl text-avocado-skin">About LAMCS</h1>
+            <p className="mt-4 text-lg text-ink max-w-2xl">
+              The Lusaka Avocado Multipurpose Cooperative Society Limited was founded
+              by smallholder avocado farmers in Lusaka Province, Zambia, to collectively market
+              their produce, access better prices, and build a sustainable value chain.
+            </p>
+          </div>
+        </Reveal>
 
       <div className="mt-20 space-y-20 text-ink/80 leading-relaxed md:mt-28">
         <Reveal>
@@ -55,25 +55,22 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal>
-          <div className="relative rounded-2xl bg-avocado-skin px-8 py-14 md:px-14 md:py-20 overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "24px 24px" }} />
-            <div className="relative">
-              <span className="inline-block rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-flesh">Governance</span>
-              <h2 className="mt-4 font-serif text-3xl md:text-4xl text-white">Farmer-Led, Farmer-Owned</h2>
-              <p className="mt-4 max-w-2xl text-lg text-white/80">
-                The Cooperative is managed by a Board elected at the Annual General Meeting.
-                Day-to-day operations are handled by a secretariat led by a General Manager,
-                supported by field officers who work directly with member farmers.
-              </p>
-            </div>
+          <div className="glass-surface--light rounded-3xl px-8 py-14 md:px-14 md:py-20">
+            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Governance</span>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-avocado-skin">Farmer-Led, Farmer-Owned</h2>
+            <p className="mt-4 max-w-2xl text-lg text-ink/80">
+              The Cooperative is managed by a Board elected at the Annual General Meeting.
+              Day-to-day operations are handled by a secretariat led by a General Manager,
+              supported by field officers who work directly with member farmers.
+            </p>
           </div>
         </Reveal>
 
         <Reveal>
-          <div className="panel-accent rounded-2xl px-8 py-14 md:px-14 md:py-20 shadow-xl shadow-pit/20">
-            <span className="inline-block rounded-full bg-white/15 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-white">Membership</span>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-white">Join the Cooperative</h2>
-            <p className="mt-4 max-w-2xl text-lg text-white/85">
+          <div className="glass-surface--light rounded-3xl px-8 py-14 md:px-14 md:py-20 shadow-xl shadow-pit/20">
+            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Membership</span>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-avocado-skin">Join the Cooperative</h2>
+            <p className="mt-4 max-w-2xl text-lg text-ink/85">
               Membership is open to any avocado farmer in Zambia. Members contribute a
               portion of their harvest to the Cooperative and receive payouts based on
               quantity and grade delivered.

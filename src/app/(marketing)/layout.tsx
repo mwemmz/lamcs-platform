@@ -27,7 +27,7 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
           </div>
         </nav>
       </header>
-      <main>{children}</main>
+      <main className="relative z-10 min-h-[60vh] bg-surface/60 backdrop-blur-xl">{children}</main>
       <footer className="border-t border-line bg-avocado-skin py-12 text-white">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-8 md:grid-cols-3">

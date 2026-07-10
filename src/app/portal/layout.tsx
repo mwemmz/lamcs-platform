@@ -16,6 +16,9 @@ export default function PortalLayout({ children }: { children: React.ReactNode }
             <Link href="/portal/profile" className="hover:text-pit transition-colors">Profile</Link>
             <Link href="/portal/contributions" className="hover:text-pit transition-colors">Contributions</Link>
             <Link href="/portal/payments" className="hover:text-pit transition-colors">Payments</Link>
+            <Link href="/" className="text-ink/50 hover:text-pit transition-colors text-xs">
+              ← Shop
+            </Link>
             <Link href="/api/auth/signout" className="text-pit hover:underline transition-colors">
               Sign Out
             </Link>
