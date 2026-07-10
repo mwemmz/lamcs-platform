@@ -157,7 +157,7 @@ export default function AdminListingsPage() {
                   <td className="py-3 font-medium">{l.name}</td>
                   <td className="py-3 text-xs capitalize">{l.category}</td>
                   <td className="py-3">
-                    <span className="rounded-full bg-avocado-flesh/20 px-2 py-0.5 text-xs font-semibold text-avocado-skin">{l.grade}</span>
+                    <span className="rounded-full bg-pit/15 px-2 py-0.5 text-xs font-semibold text-pit">{l.grade}</span>
                   </td>
                   <td className="py-3 font-mono text-right">{Number(l.price).toFixed(2)}</td>
                   <td className="py-3 font-mono text-right">{Number(l.quantityKg).toFixed(0)}</td>

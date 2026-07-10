@@ -63,7 +63,7 @@ export default function ProduceDetailPage({ params }: { params: { id: string } }
         </div>
         <div>
           <div className="flex items-center gap-3">
-            <span className="rounded-full bg-avocado-flesh/20 px-3 py-1 text-xs font-semibold text-avocado-skin">
+            <span className="rounded-full bg-pit/15 px-3 py-1 text-xs font-semibold text-pit">
               {listing.grade}
             </span>
             <span className="text-xs text-ink/40 capitalize">{listing.category}</span>

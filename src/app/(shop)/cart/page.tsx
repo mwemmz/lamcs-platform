@@ -32,7 +32,7 @@ export default function CartPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <p className="font-serif text-lg text-avocado-skin">{item.name}</p>
-                      <span className="rounded-full bg-avocado-flesh/20 px-2 py-0.5 text-xs font-semibold text-avocado-skin">
+                      <span className="rounded-full bg-pit/15 px-2 py-0.5 text-xs font-semibold text-pit">
                         {item.grade}
                       </span>
                     </div>

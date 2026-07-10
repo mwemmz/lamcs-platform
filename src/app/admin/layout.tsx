@@ -28,7 +28,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           </div>
         </nav>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
+      <main className="min-h-[60vh] bg-surface/60 backdrop-blur-xl">
+        <div className="mx-auto max-w-6xl px-4 py-8">{children}</div>
+      </main>
     </SessionProvider>
   );
 }

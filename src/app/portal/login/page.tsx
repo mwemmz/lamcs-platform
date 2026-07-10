@@ -36,8 +36,8 @@ export default function PortalLoginPage() {
 
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-4">
-      <div className="w-full max-w-sm glass-card-strong p-8">
-        <h1 className="font-serif text-2xl text-avocado-skin text-center">Member Login</h1>
+      <div className="w-full max-w-sm rounded-xl bg-surface/70 backdrop-blur-xl border border-white/20 p-8 shadow-lg">
+        <h1 className="font-serif text-2xl text-pit text-center">Member Login</h1>
         <p className="mt-1 text-center text-sm text-ink/50">
           Sign in with your phone number
         </p>
@@ -62,7 +62,7 @@ export default function PortalLoginPage() {
           <Button type="submit" className="w-full" disabled={submitting}>
             {submitting ? "Signing in…" : "Sign In"}
           </Button>
-          <a href="/portal/reset" className="block text-center text-sm text-avocado-skin underline">
+          <a href="/portal/reset" className="block text-center text-sm text-pit underline">
             Forgot password?
           </a>
         </form>

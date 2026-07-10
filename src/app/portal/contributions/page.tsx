@@ -50,7 +50,7 @@ export default function PortalContributionsPage() {
                   <td className="py-3 font-mono text-xs">{new Date(c.deliveredAt).toLocaleDateString()}</td>
                   <td className="py-3">{c.produceType}</td>
                   <td className="py-3">
-                    <span className="rounded-full bg-avocado-flesh/20 px-2 py-0.5 text-xs font-semibold text-avocado-skin">
+                    <span className="rounded-full bg-pit/15 px-2 py-0.5 text-xs font-semibold text-pit">
                       {c.grade}
                     </span>
                   </td>
