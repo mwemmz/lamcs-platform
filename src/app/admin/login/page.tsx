@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
 import { Button, Input } from "@/components/ui";
 
 export default function AdminLoginPage() {
@@ -10,7 +9,6 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,9 +23,10 @@ export default function AdminLoginPage() {
       if (res?.error) {
         setError("Invalid email or password");
       } else {
-        router.push("/admin/dashboard");
+        window.location.href = "/admin/dashboard";
       }
-    } catch {
+    } catch (err) {
+      console.error("Login error:", err);
       setError("Connection error. Please try again.");
     } finally {
       setSubmitting(false);
