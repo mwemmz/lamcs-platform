@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} ${ibmPlexMono.variable}`}>
-      <body className="font-sans bg-bg text-ink">
+      <body className="font-sans bg-bg text-surface">
         <GlobalLayout>{children}</GlobalLayout>
       </body>
     </html>

@@ -20,9 +20,9 @@ const variants: Record<Variant, string> = {
   "ghost-light":
     "border-2 border-surface text-surface hover:bg-surface/10 motion-safe:hover:shadow-[0_8px_24px_rgba(244,240,228,0.10)]",
   "ghost-pit":
-    "border-2 border-pit text-pit hover:bg-pit hover:text-white motion-safe:hover:shadow-[0_8px_24px_rgba(156,85,35,0.2)]",
+    "border-2 border-pit text-surface hover:bg-pit hover:text-white motion-safe:hover:shadow-[0_8px_24px_rgba(156,85,35,0.2)]",
   "solid-white":
-    "bg-white text-pit hover:bg-white/90 motion-safe:hover:shadow-[0_8px_24px_rgba(156,85,35,0.18)]",
+    "bg-white text-surface hover:bg-white/90 motion-safe:hover:shadow-[0_8px_24px_rgba(156,85,35,0.18)]",
 };
 
 export function Button({ variant = "primary", className = "", children, trailingIcon, ...props }: ButtonProps) {

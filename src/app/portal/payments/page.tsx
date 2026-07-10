@@ -25,8 +25,8 @@ export default function PortalPaymentsPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">My Payments</h1>
-      <p className="mt-1 text-ink/60">Payout history from the Cooperative.</p>
+      <h1 className="font-serif text-3xl text-surface">My Payments</h1>
+      <p className="mt-1 text-surface/60">Payout history from the Cooperative.</p>
 
       <Card className="mt-6 overflow-x-auto">
         <table className="w-full text-sm">

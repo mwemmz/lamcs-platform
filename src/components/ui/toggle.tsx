@@ -29,7 +29,7 @@ export function Toggle({ label, id, ...props }: ToggleProps) {
         />
       </span>
       {label && (
-        <span className="text-sm text-ink select-none">{label}</span>
+        <span className="text-sm text-surface select-none">{label}</span>
       )}
     </label>
   );

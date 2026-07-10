@@ -55,11 +55,11 @@ export default function HomePage() {
               <div key={item.name} className={`scroll-reveal hover-lift ${i === 1 ? "scroll-reveal-delay-1" : i === 2 ? "scroll-reveal-delay-2" : ""}`}>
                 <div className="double-bezel">
                   <div className="double-bezel-inner p-6">
-                    <div className="mb-3 inline-block rounded-full bg-pit/15 px-3 py-1 text-xs font-semibold text-pit">
+                    <div className="mb-3 inline-block rounded-full bg-pit/15 px-3 py-1 text-xs font-semibold text-surface">
                       {item.price}
                     </div>
-                    <h3 className="font-serif text-xl text-pit">{item.name}</h3>
-                    <p className="mt-1 text-sm text-ink/70">{item.desc}</p>
+                    <h3 className="font-serif text-xl text-surface">{item.name}</h3>
+                    <p className="mt-1 text-sm text-surface/70">{item.desc}</p>
                   </div>
                 </div>
               </div>

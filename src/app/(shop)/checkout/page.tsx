@@ -27,8 +27,8 @@ export default function CheckoutPage() {
   if (items.length === 0 && step === "form") {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">
-        <h1 className="font-serif text-3xl text-avocado-skin">Checkout</h1>
-        <p className="mt-4 text-ink/50">Your cart is empty.</p>
+        <h1 className="font-serif text-3xl text-surface">Checkout</h1>
+        <p className="mt-4 text-surface/50">Your cart is empty.</p>
       </div>
     );
   }
@@ -113,8 +113,8 @@ export default function CheckoutPage() {
   if (step === "processing") {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">
-        <h1 className="font-serif text-3xl text-avocado-skin">Processing...</h1>
-        <p className="mt-4 text-ink/60">Creating your order and sending a payment prompt to your phone.</p>
+        <h1 className="font-serif text-3xl text-surface">Processing...</h1>
+        <p className="mt-4 text-surface/60">Creating your order and sending a payment prompt to your phone.</p>
       </div>
     );
   }
@@ -122,16 +122,16 @@ export default function CheckoutPage() {
   if (step === "polling") {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">
-        <h1 className="font-serif text-3xl text-avocado-skin">Payment Sent</h1>
-        <p className="mt-2 text-ink/60">A payment prompt has been sent to {buyerPhone}.</p>
-        <p className="mt-1 text-sm text-ink/50">Approve it on your phone to complete the order.</p>
-        <p className="mt-4 font-mono text-xs text-pit">Ref: {orderRef}</p>
+        <h1 className="font-serif text-3xl text-surface">Payment Sent</h1>
+        <p className="mt-2 text-surface/60">A payment prompt has been sent to {buyerPhone}.</p>
+        <p className="mt-1 text-sm text-surface/50">Approve it on your phone to complete the order.</p>
+        <p className="mt-4 font-mono text-xs text-surface">Ref: {orderRef}</p>
         <div className="mt-6 flex justify-center">
           <div className="h-2 w-32 overflow-hidden rounded-full bg-line">
             <div className="h-full w-1/2 animate-pulse rounded-full bg-pit" />
           </div>
         </div>
-        <p className="mt-2 text-xs text-ink/40">
+        <p className="mt-2 text-xs text-surface/40">
           {paymentStatus === "SUCCESS" ? "Payment confirmed!" :
            paymentStatus === "FAILED" ? "Payment failed." :
            "Waiting for payment confirmation..."}
@@ -146,9 +146,9 @@ export default function CheckoutPage() {
   if (step === "done") {
     return (
       <div className="mx-auto max-w-2xl px-4 py-16 text-center">
-        <h1 className="font-serif text-3xl text-avocado-skin">Order Placed!</h1>
-        <p className="mt-2 text-ink/60">Your order has been placed successfully.</p>
-        <p className="mt-1 font-mono text-sm text-pit">Reference: {orderRef}</p>
+        <h1 className="font-serif text-3xl text-surface">Order Placed!</h1>
+        <p className="mt-2 text-surface/60">Your order has been placed successfully.</p>
+        <p className="mt-1 font-mono text-sm text-surface">Reference: {orderRef}</p>
         <div className="mt-8 flex justify-center gap-4">
           <Button onClick={() => router.push("/produce")}>Continue Shopping</Button>
         </div>
@@ -158,8 +158,8 @@ export default function CheckoutPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-16">
-      <h1 className="font-serif text-3xl text-avocado-skin">Checkout</h1>
-      <p className="mt-1 text-sm text-ink/50">Checking out as guest — no account required.</p>
+      <h1 className="font-serif text-3xl text-surface">Checkout</h1>
+      <p className="mt-1 text-sm text-surface/50">Checking out as guest — no account required.</p>
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-6">
         <CardSection title="Buyer Details">

@@ -15,9 +15,9 @@ export default async function ProducePage() {
     <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
       <Reveal>
         <div className="rounded-2xl bg-gradient-to-br from-avocado-flesh/15 to-avocado-flesh/5 p-10 md:p-16">
-          <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Market</span>
-          <h1 className="mt-4 font-serif text-4xl md:text-5xl text-pit">Our Produce</h1>
-          <p className="mt-4 max-w-xl text-lg text-ink/70">
+          <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-surface">Market</span>
+          <h1 className="mt-4 font-serif text-4xl md:text-5xl text-surface">Our Produce</h1>
+          <p className="mt-4 max-w-xl text-lg text-surface/70">
             Fresh from our member farms, graded and ready for you.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default async function ProducePage() {
 
       {listings.length === 0 && (
         <div className="mt-20 text-center">
-          <p className="text-ink/50">No produce available right now. Check back soon.</p>
+          <p className="text-surface/50">No produce available right now. Check back soon.</p>
         </div>
       )}
     </div>

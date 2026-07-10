@@ -26,8 +26,8 @@ export default function PortalContributionsPage() {
 
   return (
     <>
-      <h1 className="font-serif text-3xl text-avocado-skin">My Contributions</h1>
-      <p className="mt-1 text-ink/60">Records of produce you&apos;ve delivered to the Cooperative.</p>
+      <h1 className="font-serif text-3xl text-surface">My Contributions</h1>
+      <p className="mt-1 text-surface/60">Records of produce you&apos;ve delivered to the Cooperative.</p>
 
       <Card className="mt-6 overflow-x-auto">
         <table className="w-full text-sm">

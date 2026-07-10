@@ -37,7 +37,7 @@ export default function AdminLoginPage() {
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-4">
       <div className="w-full max-w-sm rounded-xl bg-surface/70 backdrop-blur-xl border border-white/20 p-8 shadow-lg">
-        <h1 className="font-serif text-2xl text-pit text-center">Admin Login</h1>
+        <h1 className="font-serif text-2xl text-surface text-center">Admin Login</h1>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <Input
             label="Email"
@@ -59,7 +59,7 @@ export default function AdminLoginPage() {
           <Button type="submit" className="w-full" disabled={submitting}>
             {submitting ? "Signing in…" : "Sign In"}
           </Button>
-          <a href="/admin/reset" className="block text-center text-sm text-pit underline">
+          <a href="/admin/reset" className="block text-center text-sm text-surface underline">
             Forgot password?
           </a>
         </form>

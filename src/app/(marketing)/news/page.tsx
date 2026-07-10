@@ -29,13 +29,13 @@ export default function NewsPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-16">
-      <h1 className="font-serif text-4xl text-avocado-skin">News & Announcements</h1>
-      <p className="mt-2 text-ink/70">
+      <h1 className="font-serif text-4xl text-surface">News & Announcements</h1>
+      <p className="mt-2 text-surface/70">
         Updates from the Cooperative and the Zambian avocado sector.
       </p>
       <div className="mt-10 space-y-6">
         {loading ? (
-          <p className="text-ink/40">Loading...</p>
+          <p className="text-surface/40">Loading...</p>
         ) : articles.length === 0 ? (
           [1, 2, 3].map((i) => (
             <article key={i} className="glass-card p-6">
