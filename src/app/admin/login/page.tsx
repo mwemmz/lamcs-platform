@@ -9,20 +9,28 @@ export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-    const res = await signIn("admin-login", {
-      email,
-      password,
-      redirect: false,
-    });
-    if (res?.error) {
-      setError("Invalid email or password");
-    } else {
-      router.push("/admin/dashboard");
+    setSubmitting(true);
+    try {
+      const res = await signIn("admin-login", {
+        email,
+        password,
+        redirect: false,
+      });
+      if (res?.error) {
+        setError("Invalid email or password");
+      } else {
+        router.push("/admin/dashboard");
+      }
+    } catch {
+      setError("Connection error. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -48,7 +56,9 @@ export default function AdminLoginPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
           {error && <p className="text-sm text-red-600">{error}</p>}
-          <Button type="submit" className="w-full">Sign In</Button>
+          <Button type="submit" className="w-full" disabled={submitting}>
+            {submitting ? "Signing in…" : "Sign In"}
+          </Button>
           <a href="/admin/reset" className="block text-center text-sm text-avocado-skin underline">
             Forgot password?
           </a>

@@ -9,20 +9,28 @@ export default function PortalLoginPage() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-    const res = await signIn("member-login", {
-      phone,
-      password,
-      redirect: false,
-    });
-    if (res?.error) {
-      setError("Invalid phone or password");
-    } else {
-      router.push("/portal/dashboard");
+    setSubmitting(true);
+    try {
+      const res = await signIn("member-login", {
+        phone,
+        password,
+        redirect: false,
+      });
+      if (res?.error) {
+        setError("Invalid phone or password");
+      } else {
+        router.push("/portal/dashboard");
+      }
+    } catch {
+      setError("Connection error. Please try again.");
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -51,7 +59,9 @@ export default function PortalLoginPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
           {error && <p className="text-sm text-red-600">{error}</p>}
-          <Button type="submit" className="w-full">Sign In</Button>
+          <Button type="submit" className="w-full" disabled={submitting}>
+            {submitting ? "Signing in…" : "Sign In"}
+          </Button>
           <a href="/portal/reset" className="block text-center text-sm text-avocado-skin underline">
             Forgot password?
           </a>
