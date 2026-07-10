@@ -22,8 +22,8 @@ export default function AboutPage() {
     <div className="mx-auto max-w-4xl px-4 py-20 md:py-28">
         <Reveal>
           <div className="glass-surface--light rounded-3xl p-10 md:p-16">
-            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Our Story</span>
-            <h1 className="mt-4 font-serif text-4xl md:text-5xl text-avocado-skin">About LAMCS</h1>
+            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Our Story</span>
+            <h1 className="mt-4 font-serif text-4xl md:text-5xl text-pit">About LAMCS</h1>
             <p className="mt-4 text-lg text-ink max-w-2xl">
               The Lusaka Avocado Multipurpose Cooperative Society Limited was founded
               by smallholder avocado farmers in Lusaka Province, Zambia, to collectively market
@@ -36,15 +36,15 @@ export default function AboutPage() {
         <Reveal>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="glass-card-strong p-8 md:p-10">
-              <h2 className="font-serif text-2xl text-avocado-skin">Who We Are</h2>
-              <p className="mt-3">
+              <h2 className="font-serif text-2xl text-surface">Who We Are</h2>
+              <p className="mt-3 text-surface/75">
                 Our members range from family farms with a few dozen trees to medium-scale
                 commercial orchards. Together we pool our harvest, grade consistently, and
                 connect directly with buyers — from Lusaka markets to export partners.
               </p>
             </div>
             <div className="glass-card-strong p-8 md:p-10">
-              <h2 className="font-serif text-2xl text-avocado-skin">Our Structure</h2>
+              <h2 className="font-serif text-2xl text-surface">Our Structure</h2>
               <p className="mt-3">
                 LAMCS is registered under the Cooperatives Act of Zambia and governed by an
                 elected committee of member farmers. Every decision is made with the producer
@@ -56,8 +56,8 @@ export default function AboutPage() {
 
         <Reveal>
           <div className="glass-surface--light rounded-3xl px-8 py-14 md:px-14 md:py-20">
-            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Governance</span>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-avocado-skin">Farmer-Led, Farmer-Owned</h2>
+            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Governance</span>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-pit">Farmer-Led, Farmer-Owned</h2>
             <p className="mt-4 max-w-2xl text-lg text-ink/80">
               The Cooperative is managed by a Board elected at the Annual General Meeting.
               Day-to-day operations are handled by a secretariat led by a General Manager,
@@ -68,8 +68,8 @@ export default function AboutPage() {
 
         <Reveal>
           <div className="glass-surface--light rounded-3xl px-8 py-14 md:px-14 md:py-20 shadow-xl shadow-pit/20">
-            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Membership</span>
-            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-avocado-skin">Join the Cooperative</h2>
+            <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Membership</span>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl text-pit">Join the Cooperative</h2>
             <p className="mt-4 max-w-2xl text-lg text-ink/85">
               Membership is open to any avocado farmer in Zambia. Members contribute a
               portion of their harvest to the Cooperative and receive payouts based on

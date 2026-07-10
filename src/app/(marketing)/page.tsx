@@ -42,8 +42,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="glass-surface--light rounded-3xl p-10 md:p-16">
             <div className="text-center scroll-reveal">
-              <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">From Our Farms</span>
-              <h2 className="mt-4 font-serif text-4xl text-avocado-skin">Our Produce</h2>
+              <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">From Our Farms</span>
+              <h2 className="mt-4 font-serif text-4xl text-pit">Our Produce</h2>
               <p className="mt-2 text-ink/70">Farm-fresh, graded, and delivered to you.</p>
             </div>
             <div className="mt-14 grid gap-8 md:grid-cols-3">
@@ -55,10 +55,10 @@ export default function HomePage() {
               <div key={item.name} className={`scroll-reveal hover-lift ${i === 1 ? "scroll-reveal-delay-1" : i === 2 ? "scroll-reveal-delay-2" : ""}`}>
                 <div className="double-bezel">
                   <div className="double-bezel-inner p-6">
-                    <div className="mb-3 inline-block rounded-full bg-avocado-flesh/20 px-3 py-1 text-xs font-semibold text-avocado-skin">
+                    <div className="mb-3 inline-block rounded-full bg-pit/15 px-3 py-1 text-xs font-semibold text-pit">
                       {item.price}
                     </div>
-                    <h3 className="font-serif text-xl text-avocado-skin">{item.name}</h3>
+                    <h3 className="font-serif text-xl text-pit">{item.name}</h3>
                     <p className="mt-1 text-sm text-ink/70">{item.desc}</p>
                   </div>
                 </div>
@@ -73,8 +73,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="glass-surface--light rounded-3xl p-10 md:p-16 text-center">
             <div className="scroll-reveal">
-              <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-avocado-skin">Why Join</span>
-              <h2 className="mt-4 font-serif text-4xl text-avocado-skin">Why LAMCS?</h2>
+              <span className="inline-block rounded-full bg-avocado-flesh/30 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-pit">Why Join</span>
+              <h2 className="mt-4 font-serif text-4xl text-pit">Why LAMCS?</h2>
               <p className="mt-2 text-ink/70">A cooperative built for and by Zambian avocado growers.</p>
             </div>
             <div className="mt-14 grid gap-8 md:grid-cols-3">
@@ -84,9 +84,9 @@ export default function HomePage() {
                 { title: "Direct from Farm", desc: "No middlemen — better prices for farmers and buyers alike." },
               ].map((item, i) => (
                 <div key={item.title} className={`scroll-reveal hover-lift ${i === 1 ? "scroll-reveal-delay-1" : i === 2 ? "scroll-reveal-delay-2" : ""}`}>
-                  <div className="rounded-xl glass-surface--light p-8 h-full">
-                    <h3 className="font-serif text-lg text-avocado-skin">{item.title}</h3>
-                    <p className="mt-2 text-sm text-ink/70">{item.desc}</p>
+                  <div className="rounded-xl glass-card-strong p-8 h-full">
+                    <h3 className="font-serif text-lg text-surface">{item.title}</h3>
+                    <p className="mt-2 text-sm text-surface/70">{item.desc}</p>
                   </div>
                 </div>
               ))}

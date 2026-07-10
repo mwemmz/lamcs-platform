@@ -39,7 +39,7 @@ export default function NewsPage() {
         ) : articles.length === 0 ? (
           [1, 2, 3].map((i) => (
             <article key={i} className="glass-card p-6">
-              <h2 className="font-serif text-xl text-avocado-skin">
+              <h2 className="font-serif text-xl text-pit">
                 Announcement Title {i}
               </h2>
               <p className="mt-2 text-sm text-ink/70">
@@ -54,7 +54,7 @@ export default function NewsPage() {
               <p className="font-mono text-xs text-pit">
                 {new Date(a.updatedAt).toLocaleDateString()}
               </p>
-              <h2 className="mt-1 font-serif text-xl text-avocado-skin">{a.title}</h2>
+              <h2 className="mt-1 font-serif text-xl text-pit">{a.title}</h2>
               <p className="mt-2 text-sm text-ink/70 whitespace-pre-line">{a.body}</p>
             </article>
           ))

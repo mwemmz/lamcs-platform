@@ -42,7 +42,7 @@ export default function ContactPage() {
         <div>
           <h2 className="font-serif text-xl text-avocado-skin">Send a message</h2>
           {submitted ? (
-            <div className="mt-4 rounded-lg bg-avocado-flesh/15 backdrop-blur-sm border border-avocado-flesh/40 p-4 text-sm text-avocado-skin">
+            <div className="mt-4 rounded-lg bg-pit/10 backdrop-blur-sm border border-pit/30 p-4 text-sm text-pit">
               Thank you! Your message has been sent. We will get back to you shortly.
             </div>
           ) : (
@@ -74,26 +74,26 @@ export default function ContactPage() {
         </div>
         <div>
           <h2 className="font-serif text-xl text-avocado-skin">Visit us</h2>
-          <div className="mt-4 glass-card-strong p-6 space-y-4 text-sm text-ink/70">
+          <div className="mt-4 glass-card-strong p-6 space-y-4 text-sm text-surface/75">
             <p>
-              <strong className="text-ink">Office:</strong>
+              <strong className="text-surface">Office:</strong>
               <br />
               Lusaka Avocado Multipurpose Cooperative
               <br />
               Great East Road, Lusaka, Zambia
             </p>
             <p>
-              <strong className="text-ink">Phone:</strong>
+              <strong className="text-surface">Phone:</strong>
               <br />
               +260 XXX XXX XXX
             </p>
             <p>
-              <strong className="text-ink">Email:</strong>
+              <strong className="text-surface">Email:</strong>
               <br />
               info@lamcs.coop
             </p>
             <p>
-              <strong className="text-ink">Hours:</strong>
+              <strong className="text-surface">Hours:</strong>
               <br />
               Mon&ndash;Fri, 08:00 &ndash; 17:00 CAT
             </p>

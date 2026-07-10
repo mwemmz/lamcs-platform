@@ -56,11 +56,23 @@
 }
 /* lighter variant — avocado-flesh green glass, used over the video / dark sections */
 .glass-surface--light {
-  background: rgba(132, 162, 79, 0.45);
+  background: rgba(132, 162, 79, 0.55);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(53, 64, 38, 0.15);
+  border: 1px solid rgba(53, 64, 38, 0.12);
   box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.3);
+}
+
+/* warm accent variant — pit brown glass for section variety */
+.glass-surface--warm {
+  position: relative;
+  background: rgba(156, 85, 35, 0.60);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px -10px rgba(35, 43, 28, 0.4);
+  overflow: hidden;
 }
 /* fine vertical-stripe noise overlay */
 .glass-surface::before {
@@ -83,6 +95,7 @@
 }
 
 /* ---------- text hierarchy on glass ---------- */
+/* On dark glass (skin green) — use light text */
 .glass-eyebrow {
   display: inline-block;
   font-size: 0.6875rem;
@@ -104,6 +117,13 @@
   color: var(--color-avocado-flesh);
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+/* On light glass (flesh green) — use dark text */
+.glass-headline--dark {
+  color: var(--color-pit);
+}
+.glass-body--dark {
+  color: var(--color-ink);
 }
 
 /* ---------- dashed divider ---------- */
