@@ -7,3 +7,4 @@ export { Reveal } from "./reveal";
 export { StatusBadge, statusTone } from "./status-badge";
 export { GlassCard } from "./glass-card";
 export { GlassBadge } from "./glass-badge";
+export { EcommerceVideoBg } from "./ecommerce-video-bg";
