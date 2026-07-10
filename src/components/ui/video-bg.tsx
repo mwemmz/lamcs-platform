@@ -73,8 +73,8 @@ export function VideoBg({ children }: VideoBgProps) {
             className="absolute inset-0"
             style={{
               backgroundColor: "rgba(53, 64, 38, 0.35)",
-              backdropFilter: "blur(6px)",
-              WebkitBackdropFilter: "blur(6px)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
             }}
           />
           {/* subtle vignette */}
