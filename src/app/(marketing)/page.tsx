@@ -14,11 +14,11 @@ export default function HomePage() {
     <>
       <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-3xl px-4 text-center">
-          <div className="glass-surface--light rounded-3xl p-10 md:p-14 scroll-reveal">
-            <h1 className="font-serif text-5xl leading-tight text-pit md:text-7xl">
+          <div className="rounded-3xl p-10 md:p-14 scroll-reveal" style={{ background: "rgba(35, 43, 28, 0.60)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", border: "1px solid rgba(255, 255, 255, 0.10)", boxShadow: "0 20px 60px -10px rgba(35, 43, 28, 0.4)" }}>
+            <h1 className="font-serif text-5xl leading-tight text-surface md:text-7xl">
               Growing Zambia&apos;s Finest Avocados, Together
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-ink">
+            <p className="mx-auto mt-4 max-w-xl text-lg text-surface/80">
               Lusaka Avocado Multipurpose Cooperative Society — farmer-owned,
               quality-driven, feeding the nation and beyond.
             </p>
@@ -29,7 +29,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/about">
-                <Button variant="ghost-pit">
+                <Button variant="ghost-light">
                   Learn More
                 </Button>
               </Link>

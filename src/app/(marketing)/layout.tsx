@@ -6,15 +6,15 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
     <>
       <header className="sticky top-0 z-40 pt-3">
         <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full glass-strong border border-white/30 px-6 py-3 shadow-lg shadow-black/5 mx-4">
-          <Link href="/" className="font-serif text-xl font-bold text-avocado-skin">
+          <Link href="/" className="font-serif text-xl font-bold text-surface">
             LAMCS
           </Link>
-          <div className="flex items-center gap-6 text-sm font-medium text-ink">
-            <Link href="/about" className="hover:text-pit transition-premium">About</Link>
-            <Link href="/produce" className="hover:text-pit transition-premium">Produce</Link>
-            <Link href="/news" className="hover:text-pit transition-premium">News</Link>
-            <Link href="/gallery" className="hover:text-pit transition-premium">Gallery</Link>
-            <Link href="/contact" className="hover:text-pit transition-premium">Contact</Link>
+          <div className="flex items-center gap-6 text-sm font-medium text-surface/80">
+            <Link href="/about" className="hover:text-white transition-premium">About</Link>
+            <Link href="/produce" className="hover:text-white transition-premium">Produce</Link>
+            <Link href="/news" className="hover:text-white transition-premium">News</Link>
+            <Link href="/gallery" className="hover:text-white transition-premium">Gallery</Link>
+            <Link href="/contact" className="hover:text-white transition-premium">Contact</Link>
             <Link href="/cart" className="relative">
               <CartBadge />
             </Link>
